@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "LInkedin Auto Connnector",
+  "version": "1.0.0",
+  "description": "Description of my extension.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": ["activeTab", "tabs", "storage"],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  }
+}
